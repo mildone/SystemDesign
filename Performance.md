@@ -78,6 +78,12 @@ it's dream to have super powerful unit, it only make sense to discuss performanc
 * others
 ```
 ## Performance Tuning
+```
+* health/KPI monitoring - telemetry/logging to collect metrics
+* monitoring 90/95/99 percentiles to find hide spikes
+* server rounds of tuning(attack one at a time)
+* Parallezie, parallezie, parallezie
+```
 ## Performance Testing
 
 
