@@ -28,8 +28,16 @@ it doesn't need to be strong in terms units(e.g. performance in peak scenario)
 * event sourcing
 ## Performance Design Anti-Patterns
 Together with design patterns, this is worth to consider when doing system first place.
-
-*
+[Anti-patterns] 
+* busy components(e.g. Database, offering too-much on a single data store)
+* busy FE(moving resource-intensive tasks to BE)
+* chatty IO(small request, aggregation)
+* extraneous fetching(asking too much when requesting so)
+* improper instantiation(repeately createing and destroying objects than singleton)
+* no caching for hot-spot data
+* retry storm
+* synchronous IO
+* monolithic presistence(using same data store for different use. e.g. MOF to N*A table years ago)
 ## Rule: Check list
 ## Performance Target
 ## Performance Tuning
