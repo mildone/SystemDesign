@@ -38,6 +38,34 @@ Together with design patterns, this is worth to consider when doing system first
 * synchronous IO
 * monolithic presistence(using same data store for different use. e.g. MOF to N*A table years ago)
 ## Rule: Check list
+### Application design
+* scalling: stateless
+* scalling: auto-detection
+* scalling: load balance dynamic
+* scalling: service registry
+* PaaS features: HPA
+* seperation of concern and SRP 
+* Avoid client affinity(e.g. only route to certain instance)
+* off-load CPU-intensive and I/O intensive task as backend tasks
+* shared nothing architect
+### Data Management
+* understand Data
+* data partition
+* reduce chatty interation/request
+* use queue to level(load of high velocity data write)
+* protect your datastore(by mimimizing load and volume)
+* set cache control
+* handle data growth and retention
+* optimize DTO using effective format
+###implementation general Rule
+* review anti-pattern
+* use async call
+* avoid locking resource 
+* minimize time that connections and resource are in use
+* minimize IO request or in batch
+* create resource dependency during deployment or application start up 
+* less finger-print framework in use
+* avoid serve side maintain state
 ## Performance Target
 ## Performance Tuning
 ## Performance Testing
