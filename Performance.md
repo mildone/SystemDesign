@@ -70,10 +70,13 @@ Together with design patterns, this is worth to consider when doing system first
 it's dream to have super powerful unit, it only make sense to discuss performance with indicator and context
 * Load Model (under which it works)
 * indicators to measure 
-** throughout
-** response time
-** availability
-** business operations requirements
+```
+* throughout
+* response time
+* availability
+* business operations requirements
+* others
+```
 ## Performance Tuning
 ## Performance Testing
 
