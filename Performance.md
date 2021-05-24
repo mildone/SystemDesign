@@ -67,6 +67,13 @@ Together with design patterns, this is worth to consider when doing system first
 * less finger-print framework in use
 * avoid serve side maintain state
 ## Performance Target
+it's dream to have super powerful unit, it only make sense to discuss performance with indicator and context
+* Load Model (under which it works)
+* indicators to measure 
+** throughout
+** response time
+** availability
+** business operations requirements
 ## Performance Tuning
 ## Performance Testing
 
