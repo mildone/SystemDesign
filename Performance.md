@@ -28,7 +28,8 @@ it doesn't need to be strong in terms units(e.g. performance in peak scenario)
 * event sourcing
 ## Performance Design Anti-Patterns
 Together with design patterns, this is worth to consider when doing system first place.
-[Anti-patterns] 
+
+[Anti-patterns] (http://baidu.com)
 * busy components(e.g. Database, offering too-much on a single data store)
 * busy FE(moving resource-intensive tasks to BE)
 * chatty IO(small request, aggregation)
