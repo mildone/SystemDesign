@@ -6,11 +6,26 @@ some notice when dealing with cloud design(e.g. Micro service) and monolithic "f
 * on-primise
 * key
 ```
-scalability is key when designing cloud servcies. 
-it doesn't need to be strong in terms units, it's important to be scalable when necessary or triggered and shared nothing or share data hanlding pattern allows so
+scalability is key when designing cloud servcies(shared nothing or share data hanlding pattern)
+it doesn't need to be strong in terms units(e.g. performance in peak scenario)
 ```
 ## Design Principles
+* Become data-driven
+* avoid anti-patterns
+* performance load testing to set limit
+* monitoring and optimize(logging to get root cause)
+* scale-cube(XYZ)
 ## Performance Design Patterns
+* cache-aside
+* choreography(avoid SPOC)
+* CQRS(read and write seperation)
+* hirizontal scalling
+* index bable
+* Priority Queue
+* queue-based load leveling
+* sharding
+* static content hosting(SDN)
+* event sourcing
 ## Performance Design Anti-Patterns
 ## Rule: Check list
 ## Performance Target
