@@ -27,6 +27,9 @@ it doesn't need to be strong in terms units(e.g. performance in peak scenario)
 * static content hosting(SDN)
 * event sourcing
 ## Performance Design Anti-Patterns
+Together with design patterns, this is worth to consider when doing system first place.
+
+*
 ## Rule: Check list
 ## Performance Target
 ## Performance Tuning
