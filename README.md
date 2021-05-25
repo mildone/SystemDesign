@@ -1,3 +1,4 @@
 # SystemDesign
-For those who wants to build system wide knowledge.
-The more i see the less i know for sure. 
+    For those who wants to build system wide knowledge.
+    Crash it and good luck.
+
