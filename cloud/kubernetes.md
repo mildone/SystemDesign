@@ -51,7 +51,7 @@ lifecycle is with pod.
 * persistentVolumeClaim (PV) 
 ```
 ### Concept: Namespace
-
+![image](../img/KA.jpg)
 
 ## network
 ## architecture
