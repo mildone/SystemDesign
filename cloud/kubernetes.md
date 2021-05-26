@@ -5,6 +5,8 @@ PaaS kind providing cluster management, A&A, mutlti-tenant, service registration
 *Service(label, cluster ip)
 *pod(pause container and business container, sharing volume and network) 
 *node(control node, edge node, worker node, carrying different kind of role and pods)
+	* control node : apiserver, controller-manager, scheduler 
+	* worker node: kubectl, kube-proxy
 ```
 
 ## network
