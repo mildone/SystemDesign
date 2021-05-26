@@ -13,7 +13,11 @@ Deployment Conencept
 	*RC
 	*Deployment
 	*service
-	*
+```
+### kubernete yaml 
+```
+1. kubectl api-resources
+2. kubectl explain deployments or kubectl explain deployments.metadata or kubectl explain deployments --recursive
 ```
 
 ## network
