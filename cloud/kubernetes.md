@@ -18,6 +18,7 @@ Deployment Conencept
 ```
 1. kubectl api-resources
 2. kubectl explain deployments or kubectl explain deployments.metadata or kubectl explain deployments --recursive
+eg.  kubectl get replicasets <name> -n <namespace> -o yaml 
 ```
 
 ## network
