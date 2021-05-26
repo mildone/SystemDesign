@@ -14,6 +14,15 @@ Deployment Conencept
 	*Deployment
 	*service
 ```
+### Concept:Node
+```
+* This is coming from e.g. OpenStack or other VIM managed resource, registered to Kubernetes node controller by telling trhough kubectl. 
+* kubectl, kube-proxy, docerk-daemon running on top. 
+* Status: Pending, Running, Terminated
+```
+### Concept: Pod
+```
+```
 ### kubernete yaml 
 ```
 1. kubectl api-resources
