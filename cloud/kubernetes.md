@@ -14,6 +14,12 @@ Deployment Conencept
 	*Deployment
 	*service
 ```
+### kubernete yaml development e.g. writing service, pod, deployments
+```
+1. kubectl api-resources
+2. kubectl explain deployments or kubectl explain deployments.metadata or kubectl explain deployments --recursive
+eg.  kubectl get replicasets <name> -n <namespace> -o yaml 
+```
 ### Concept:Node
 ```
 * This is coming from e.g. OpenStack or other VIM managed resource, registered to Kubernetes node controller by telling trhough kubectl. 
@@ -22,14 +28,21 @@ Deployment Conencept
 ```
 ### Concept: Pod
 ```
+1. container insider pod share IPC, Volumes, PID, Network, UTS
 ```
-### kubernete yaml 
+### Concept: Labels
+link things. used internally by kubernetes to link service to pod, affinity rule. node selector etc. 
+### Concept: Service
+service cluster IP is not changed but only for internal use. 
+service provides external access thorugh NodePort or LoadBalancer
+### Volume 
 ```
-1. kubectl api-resources
-2. kubectl explain deployments or kubectl explain deployments.metadata or kubectl explain deployments --recursive
-eg.  kubectl get replicasets <name> -n <namespace> -o yaml 
-```
+lifecycle is with pod.
+* EmptyDir
+* hostPath (in host machine)
 
+
+```
 ## network
 ## architecture
 ## command & Tips
@@ -59,5 +72,6 @@ eg.  kubectl get replicasets <name> -n <namespace> -o yaml
 20. helm history <** name>
 21. kubectl debug <pod name> --attach
 22. kubectl run -ti net-debug --image=nixery.dev/shell/curl/wget/htop /bin/bash
-23. kubectl sniff <pod name>  (wireshark traffic of that pod) 
+23. kubectl sniff <pod name>  (wireshark traffic of that pod)
+24. kubectl scale rc <name> --replicas=3 
 ```
