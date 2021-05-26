@@ -1,5 +1,9 @@
 # Kubernetes
 ## concept
+PaaS kind providing cluster management, A&A, mutlti-tenant, service registration/discovery, load balance, self-monitoring/healing, rolling upgrade and scalling out, scheduling.
+		*Service(label, cluster ip)
+		*pod(pause container and business container, sharing volume and network) 
+		*node(control node, edge node, worker node, carrying different kind of role and pods)
 ## network
 ## architecture
 ## command & Tips
