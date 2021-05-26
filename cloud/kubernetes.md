@@ -40,9 +40,19 @@ service provides external access thorugh NodePort or LoadBalancer
 lifecycle is with pod.
 * EmptyDir
 * hostPath (in host machine)
-
-
+* gcePersistentDisk
+* awsElasticBlockStore
+* nfs
+* iscsi
+* glusterfs
+* rdb
+* gitRepo
+* secret
+* persistentVolumeClaim (PV) 
 ```
+### Concept: Namespace
+
+
 ## network
 ## architecture
 ## command & Tips
