@@ -50,11 +50,32 @@ lifecycle is with pod.
 * secret
 * persistentVolumeClaim (PV) 
 ```
-### Concept: Namespace
+## architecture
 ![image](../img/KA.jpg)
+```
+Example of creating service/pod 
+1. develop replicaset and apply kubectl create -f <rc.yaml> 
+	2.1 API Server create record to ETCD 
+	2.2 controler manager monitor this change thorugh API server, find out there is no pod for that then create pod object according to RC template 
+	2.3 scheduler find this pod object creation activity. schdule it to right node per algorithm, writing record to etcd through API server 
+	2.4 kubelet on target Node get this order and create pod as well as taking care of its lifecycle.
+3. develop service and apply kubectl create -f <svc.yaml>
+	4.1 API server receive service to POD link request
+	4.2 Controller manager query and generate service endpoint, write to etcd through API server 
+	4.3 Proxy on Node get this change and create mapping/routing through lb.
+```
+```
+component role: 
+* API Server: CRUD and change notice
+* Controller manager: workhourse and controller 
+* Scheduler: as it is 
+* kubelet: taking care of POD LCM
+* Proxy: service proxy and request routing 
+* etcd: service registry/discovery/other usrage e.g. subscribe&notice 
+```
 
 ## network
-## architecture
+
 ## command & Tips
 
 1. kubectl apply -f **.yaml
