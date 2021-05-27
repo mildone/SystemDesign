@@ -103,7 +103,15 @@ Authorization: AlwaysDeny, AlwaysAllow, ABAC(Attribute Based Access Control)
 	{"user":"eric"}    eric is allowed to do anything 
 	{"user":"eric","resource":"pods","readonly":true} eric is allowed to read all pods info
 ```
-
+## secret
+```
+used for password, token, key etc. 
+* Opaque : base64
+	* echo -n "amdin"|base64
+	* echo "<encrypted string>"|base64 --decode
+* Service Account : access API server 
+* kubernetes.io/dockerconfigjson : docker registry a&a info
+```
 ## network
 
 ## command & Tips
