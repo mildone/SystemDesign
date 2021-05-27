@@ -77,6 +77,7 @@ component role:
 	* Token Controller
 	* Service Controller
 	* Endpoint Controller
+	
 * Scheduler: as it is 
 * kubelet: taking care of POD LCM
 * Proxy: service proxy and request routing 
