@@ -36,6 +36,8 @@ link things. used internally by kubernetes to link service to pod, affinity rule
 ### Concept: Service
 service cluster IP is not changed but only for internal use. 
 service provides external access thorugh NodePort or LoadBalancer
+in practice, once receiving Service creation request. there will be Endpoint(ip+port) created for that service with same name, that will link to selected out pods through label selector. 
+Kubernetes support TCP and UDP to access those POD. 
 ### Volume 
 ```
 lifecycle is with pod.
@@ -77,7 +79,7 @@ component role:
 	* Token Controller
 	* Service Controller
 	* Endpoint Controller
-	
+			
 * Scheduler: as it is 
 * kubelet: taking care of POD LCM
 * Proxy: service proxy and request routing 
