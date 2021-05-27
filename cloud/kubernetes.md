@@ -94,6 +94,15 @@ component role:
 	*TCPSocketAction
 * ReadinessProbe
 ```
+## Authenticaiton & Authorization
+```
+Authenticaiton: CA, Token, HTTPBasic
+Authorization: AlwaysDeny, AlwaysAllow, ABAC(Attribute Based Access Control)
+*ABAC (user, readonly, resource, namespace as attributes of strategy object)
+	*e.g. some authorization json. 
+	{"user":"eric"}    eric is allowed to do anything 
+	{"user":"eric","resource":"pods","readonly":true} eric is allowed to read all pods info
+```
 
 ## network
 
