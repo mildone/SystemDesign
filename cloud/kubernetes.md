@@ -29,6 +29,7 @@ eg.  kubectl get replicasets <name> -n <namespace> -o yaml
 ### Concept: Pod
 ```
 1. container insider pod share IPC, Volumes, PID, Network, UTS
+2. RestartPolicy: Always, OnFailure, Never
 ```
 ### Concept: Labels
 link things. used internally by kubernetes to link service to pod, affinity rule. node selector etc. 
@@ -68,6 +69,14 @@ Example of creating service/pod
 component role: 
 * API Server: CRUD and change notice
 * Controller manager: workhourse and controller 
+	* Replication Controller
+	* Node Controller
+	* ResourceQuota Controller
+	* Namespace Controller
+	* ServiceAccount Controller
+	* Token Controller
+	* Service Controller
+	* Endpoint Controller
 * Scheduler: as it is 
 * kubelet: taking care of POD LCM
 * Proxy: service proxy and request routing 
