@@ -112,6 +112,11 @@ used for password, token, key etc.
 * Service Account : access API server 
 * kubernetes.io/dockerconfigjson : docker registry a&a info
 ```
+```
+1. kubectl get secret #get listed secret
+2. kubectl get secret <name> -o jsonpath='{.data}'
+3. echo "<******>" |base64 --decode  #<****> is the one in step2
+```
 ## network
 
 ## command & Tips
