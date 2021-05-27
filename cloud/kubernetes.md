@@ -81,9 +81,18 @@ component role:
 	* Endpoint Controller
 			
 * Scheduler: as it is 
+	* some strategy: e.g. NoDiskConflict, PodFitsResources, PodSelectorMatches, PodFitHost, CheckNodeLabelPresence, and so on. 
 * kubelet: taking care of POD LCM
 * Proxy: service proxy and request routing 
 * etcd: service registry/discovery/other usrage e.g. subscribe&notice 
+```
+## Pod Health Check
+```
+* LivenessProbe
+	*ExecAction
+	*HTTPGetAction
+	*TCPSocketAction
+* ReadinessProbe
 ```
 
 ## network
