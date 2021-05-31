@@ -132,7 +132,7 @@ principle: Flat network in kubernetes
 Docker network model: Host, None, Bridge, container. normally it's bridge: docker0
 ```
 (communication accross host, requires Plugin) /overlay 
-### Docker OCI/ORI
+### Docker CNI
 ### kubernetes network 
 ```
 1. scope of docker0 ip range on diffrent node(global unique)
