@@ -118,6 +118,37 @@ used for password, token, key etc.
 3. echo "<******>" |base64 --decode  #<****> is the one in step2
 ```
 ## network
+principle: Flat network in kubernetes
+```
+1. pod can communicate with other pod without NAT
+2. pod can communicate with other pod(not in same host) without NAT
+3. ip+port is same from pod external/internal view. 
+```
+### Docker network model
+```
+1. kernel level network space isolation. (own iptables/netfilter to set up fw, nat rule etc)
+2. veth device to connect different network namespace.(ip link show)
+3. bridge, route, iptabel/netfilter (ip route list)
+Docker network model: Host, None, Bridge, container. normally it's bridge: docker0
+```
+(communication accross host, requires Plugin) /overlay 
+### Docker OCI/ORI
+### kubernetes network 
+```
+1. scope of docker0 ip range on diffrent node(global unique)
+2. pod ip to node ip mapping
+#Plugin e.g. calico, flannel(overlay). etc.
+kube-proxy takes care of routing and Load balanace (e.g .RR or session affinity)
+```
+pod to servie
+```
+1. kube-proxy takes care of clusterip:port to pod behind service (create iptables rule per service dynamically)
+```
+### kubernetes network plugin
+	* flannel (flannel0 on top of docker0) 
+	* calico
+	* ovs (bridge gr0 to connect docker0 on different node)
+	* direct routing(docker0 to docker0 on other node)
 
 ## command & Tips
 
