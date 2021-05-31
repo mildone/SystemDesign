@@ -145,8 +145,8 @@ pod to servie
 1. kube-proxy takes care of clusterip:port to pod behind service (create iptables rule per service dynamically)
 ```
 ### kubernetes network plugin
-	* flannel (flannel0 on top of docker0) 
-	* calico
+	* flannel (flannel0 on top of docker0, overaly) 
+	* calico (tier3 network, Felix, BGP client)
 	* ovs (bridge gr0 to connect docker0 on different node)
 	* direct routing(docker0 to docker0 on other node)
 
