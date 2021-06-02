@@ -150,6 +150,19 @@ pod to servie
 	* ovs (bridge gr0 to connect docker0 on different node)
 	* direct routing(docker0 to docker0 on other node)
 
+## Kubernetes API
+REST 4 Levels defination
+```
+Resource model
+use HTTP GET, PUT, POST, PATCH 
+status code:
+	* 1** process info
+	* 2** success
+	* 3** redirection
+	* 4** client side error
+	* 5** server side error
+```
+
 ## command & Tips
 
 1. kubectl apply -f **.yaml
