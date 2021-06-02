@@ -55,6 +55,8 @@ lifecycle is with pod.
 ```
 ## architecture
 ![image](../img/KA.jpg)
+and 
+![image](../img/k8s.jpg)
 ```
 Example of creating service/pod 
 1. develop replicaset and apply kubectl create -f <rc.yaml> 
