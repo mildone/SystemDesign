@@ -147,8 +147,7 @@ pod to servie
 ### kubernetes network plugin
 	* flannel (flannel0 on top of docker0, overaly) 
 	* calico (tier3 network, Felix, BGP client)
-	* ovs (bridge gr0 to connect docker0 on different node)
-	![image](../img/ovs.jpg)
+	* ovs (bridge gr0 to connect docker0 on different node)	
 	* direct routing(docker0 to docker0 on other node)
 	```
 	ifconfig docker0 10.1.10.1/24
@@ -156,7 +155,9 @@ pod to servie
 	route add -net 10.1.10.0 netmask 255.255.255.0 gw 192.168.1.128
 	route -n #check the routing rule
 	```
-
+Pic to show helicoptor's view
+#### OVS
+![image](../img/ovs.jpg)
 ## Kubernetes API
 REST 4 Levels defination
 ```
