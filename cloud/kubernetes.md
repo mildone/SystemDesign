@@ -160,6 +160,8 @@ Pic to show helicoptor's view
 ![image](../img/ovs.jpg)
 #### Direct Routing
 ![image](../img/dr.jpg)
+#### Flannel 
+![image](../img/flannel.jpg)
 ## Kubernetes API
 REST 4 Levels defination
 ```
