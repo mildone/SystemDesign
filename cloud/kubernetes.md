@@ -242,4 +242,5 @@ kubectl replace -f pod-container-limits.yaml
 22. kubectl run -ti net-debug --image=nixery.dev/shell/curl/wget/htop /bin/bash
 23. kubectl sniff <pod name>  (wireshark traffic of that pod)
 24. kubectl scale rc <name> --replicas=3 
+25. kubectl get pods --all-namespaces -o wide
 ```
