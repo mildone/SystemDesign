@@ -148,6 +148,7 @@ pod to servie
 	* flannel (flannel0 on top of docker0, overaly) 
 	* calico (tier3 network, Felix, BGP client)
 	* ovs (bridge gr0 to connect docker0 on different node)
+	![image](../img/ovs.jpg)
 	* direct routing(docker0 to docker0 on other node)
 	```
 	ifconfig docker0 10.1.10.1/24
