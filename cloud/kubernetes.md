@@ -158,6 +158,8 @@ pod to servie
 Pic to show helicoptor's view
 #### OVS
 ![image](../img/ovs.jpg)
+#### Direct Routing
+![image](../img/dr.jpg)
 ## Kubernetes API
 REST 4 Levels defination
 ```
