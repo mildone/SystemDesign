@@ -149,6 +149,12 @@ pod to servie
 	* calico (tier3 network, Felix, BGP client)
 	* ovs (bridge gr0 to connect docker0 on different node)
 	* direct routing(docker0 to docker0 on other node)
+	```
+	ifconfig docker0 10.1.10.1/24
+	route add -net 10.1.20.0 netmask 255.255.255.0 gw 192.168.1.129
+	route add -net 10.1.10.0 netmask 255.255.255.0 gw 192.168.1.128
+	route -n #check the routing rule
+	```
 
 ## Kubernetes API
 REST 4 Levels defination
@@ -162,6 +168,44 @@ status code:
 	* 4** client side error
 	* 5** server side error
 ```
+## Kubernetes cluster management and Maintenance
+### node isolation
+```
+1. first set node to unschedule 
+kubectl patch node <node name> -p '{"spec":{"unschedulable":true}}'
+2. stop pod on it
+3. set back 
+kubectl patch node <node name> -p '{"spec":{"unschedulable":false}}'
+```
+### node scale-out (kubelet, kube-proxy)
+### pod scale-out
+```
+kubectl scale rc <rc name> --replicas=3
+```
+### Label resource
+```
+kubectl label pod <pod name> role=backend
+kubectl get pod <pod name> -n <namespace> --show-labels
+```
+### Global Limit
+e.g. use Kind:LimitRange to limit all pod resource requirements. 
+```
+apiVersion: v1
+kind: LimitRange
+metadata: limit-range-1
+spec:
+  limits: 
+    - type: "Pod"
+      max:
+        cpu: "2"
+	memory: 1Gi
+      min:
+        cpu: 250m
+	memory: 32Mi
+kubectl replace -f pod-container-limits.yaml 
+
+```
+
 
 ## command & Tips
 
