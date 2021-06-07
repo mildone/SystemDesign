@@ -11,6 +11,17 @@ scheduler strategy: FIFO, FAIR,
 ## Spark
 framework
 
+## Haddop start-all.sh can't have datanode 
+root cause: the cluster id is different if you compare data/current/VERSION and name/current/VERSION. 
+fix: copy clusterid in name/current/VERSION to /data/current/VERSION 
+it's caused by running format twice or several times. 
+to locate VERSION file. 
+```
+1. find it in core-default.xml where those info are recorded as configuraiton when starting HADOOP
+2. find / -name VERSION -print|grep -i current
+```
+
+
 
 
 
