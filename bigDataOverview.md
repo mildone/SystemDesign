@@ -8,6 +8,9 @@ scheduler strategy: FIFO, FAIR,
 ## ZooKeeper
 ## Hive (sql like client)
 ## HBASE (distributed Database)
+## Spark
+framework
+
 
 
 
