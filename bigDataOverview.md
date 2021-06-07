@@ -1,6 +1,7 @@
 # Overview
 ## HDFS (file system)
 NameNode and DataNode
+### POSIX 
 ## YARN
 ResourceManager, NodeManager, ApplicationManager, Container
 scheduler strategy: FIFO, FAIR, 
