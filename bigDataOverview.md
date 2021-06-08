@@ -1,6 +1,16 @@
 # Overview
 ## HDFS (file system)
 NameNode and DataNode
+### Rack awareness 
+```
+configuration entry in core-site.xml
+<property>
+  <name>net.topology.script.file.name</name>
+  <value>/etc/hadoop/conf/topology_script.py</value>
+</property>
+example topology script at https://cwiki.apache.org/confluence/display/HADOOP2/Topology+rack+awareness+scripts
+idea is like to get arranged rack for different node. otherwise goes to /default/rack
+```
 ### POSIX 
 ## YARN
 ResourceManager, NodeManager, ApplicationManager, Container
