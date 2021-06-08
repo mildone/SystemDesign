@@ -21,6 +21,7 @@ example topology script at https://cwiki.apache.org/confluence/display/HADOOP2/T
 idea is like to get arranged rack for different node. otherwise goes to /default/rack.
 e.g. input is ID and output is the rackID on that node. 
 ```
+![image](./img/rackAware.jpg)
 ### POSIX 
 ## YARN
 ResourceManager, NodeManager, ApplicationManager, Container
