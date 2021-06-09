@@ -59,8 +59,10 @@ when that operaiton would need more partition to be invovled rather than it's ok
 * stage: one job can be running in several stages. one stage can be several tasks
 * Task: running by executor. (thread of executor) 
 Note: Stage is the one scheduled when running one job
-Spark running architect
+#### Spark running architect
 ![image](./img/spark.jpg)
+#### Spark job execution 
+![image](./img/sjob.jpg)
 ## Hadoop start-all.sh can't have datanode 
 root cause: the cluster id is different if you compare data/current/VERSION and name/current/VERSION. 
 fix: copy clusterid in name/current/VERSION to /data/current/VERSION 
