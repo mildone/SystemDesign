@@ -47,8 +47,20 @@ Design of RDD is rooted from concept that moving computing task to node. (cause 
 #### Shuffle
 when that operaiton would need more partition to be invovled rather than it's ok to performing on single partitoin alone. in that case, Spark need a all-to-all operation. that's shuffle.
   * normally repartion operation like repartition , coalesce, byKey operation like groupByKey, reduceByKey and join oepraiton like cogroup, join
-
-
+### Spark inside
+* RDD as above
+* DAG: Directed Acyclic Graph (reflect lineage of RDD)
+* Driver program: take applicaiton and generate DAG
+* cluster manager: e.g. YARN or Mesos
+* worknode: as it is 
+* executor: process in worknode. running different kind of task and data 
+* Application: user developed application, one application is formed of multi job
+* job:  one job is of multi RDD and operaiton/transformation on it. (like the work you want to do, e.g. wordcount)
+* stage: one job can be running in several stages. one stage can be several tasks
+* Task: running by executor. (thread of executor) 
+Note: Stage is the one scheduled when running one job
+Spark running architect
+![image](./img/spark.jpg)
 ## Hadoop start-all.sh can't have datanode 
 root cause: the cluster id is different if you compare data/current/VERSION and name/current/VERSION. 
 fix: copy clusterid in name/current/VERSION to /data/current/VERSION 
