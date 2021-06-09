@@ -31,7 +31,20 @@ scheduler strategy: FIFO, FAIR,
 ## Hive (sql like client)
 ## HBASE (distributed Database)
 ## Spark
-framework
+It is a framework, toolset, facility provider that supports batch, streaming, interactive operation mode. 
+### RDD(Resilient Distributed Dataset) 
+it's read-only, distributed in cluster, re-used and in-memory data abstration type for computing operaiton. 
+Supported Operations:
+  * Transformation： that is lazy loading kind. (map, flatmap, filter, distinct, union, intersection, subtract, cartesian
+  * action： understand that RDD init and execution really happens. (collect, count, countByKey, take, top, reduce, fold, foreach, saveAsTextFile, saveAsSequenceFile)
+RDD can be re-built in failure or exception case based on its lineage. 
+  * narrow dependency: 1 to 1 in terms of parent RDD being transformed to child RDD
+  * wide dependency: 1 parent RDD may be used/transformed to many child RDD
+Submission, Job, DAG, Stage
+
+Design of RDD is rooted from concept that moving computing task to node. (cause RDD can be re-built based on DAG)
+
+
 
 ## Hadoop start-all.sh can't have datanode 
 root cause: the cluster id is different if you compare data/current/VERSION and name/current/VERSION. 
