@@ -50,10 +50,10 @@ when that operaiton would need more partition to be invovled rather than it's ok
 ### Spark inside
 * RDD as above
 * DAG: Directed Acyclic Graph (reflect lineage of RDD)
-* Driver program: take applicaiton and generate DAG
+* Driver program: take applicaiton and generate DAG. (once got executor allocated on node. driver program must also listen and accept incoming connection from its executor through its lifetime. and considering exectutors stays with its application the whole time. then it mean all and forever till stop)
 * cluster manager: e.g. YARN or Mesos
 * worknode: as it is 
-* executor: process in worknode. running different kind of task and data 
+* executor: process in worknode. running different kind of task and data.(spark also sends application coe(jar or py) to executors.
 * Application: user developed application, one application is formed of multi job
 * job:  one job is of multi RDD and operaiton/transformation on it. (like the work you want to do, e.g. wordcount)
 * stage: one job can be running in several stages. one stage can be several tasks
