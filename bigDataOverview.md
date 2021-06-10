@@ -3,6 +3,8 @@
 NameNode and DataNode
 ### General info of HDFS
 data block is 64M. (write once, read multi times)
+Relative： umask（the one taken out by defualt setting in terms of permission）
+Relative: Sticky bit(protect itself being wrongly deleted by other user)
 ### Staging
 ```
 1. client will cash the temp file write request beforing reaching data block 
