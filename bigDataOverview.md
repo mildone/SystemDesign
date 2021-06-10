@@ -35,7 +35,14 @@ idea is like to get arranged rack for different node. otherwise goes to /default
 e.g. input is ID and output is the rackID on that node. 
 ```
 ![image](./img/rackAware.jpg)
-### POSIX 
+### EditLog, FsImage and checkpoint
+ * EditLog: log to chang on HDFS file system. (namenode stoer this editLog in namenode local OS)
+ * FsImage： filesystem namespace, mapping from file to datablock
+ * checkpoint: namenode keep whole filesystem namespace mapping to blockmap. when namenode starting, it will apply operaiotn logged through Editlog on that time FsImage. then persiste new updated FsImage from in-memory to Local FS. and remove old EditLog.
+```
+kind of like system snapshot sampling. and EditLog with FsImage is the one used to back-tracking the system change. 
+```
+ 
 ## YARN
 ResourceManager, NodeManager, ApplicationManager, Container
 scheduler strategy: FIFO, FAIR, 
