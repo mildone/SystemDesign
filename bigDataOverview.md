@@ -1,6 +1,19 @@
 # Overview
 ## HDFS (file system)
 NameNode and DataNode
+### General info of HDFS
+data block is 64M. (write once, read multi times)
+### Staging
+```
+1. client will cash the temp file write request beforing reaching data block 
+2. client contact namenode and request a datanode location. 
+3. namenode schedule so. and return datanode id, target datablock to client
+4. client write content in temp file to allocated datanode and close file. 
+5. client notice namenode that file closed. 
+6. namenode log so. (notice if namenode down before file close, then file in block will be lost, this is due design consideration on e.g. performance or so)
+```
+* Pipeline copy to replica copy on other node. e.g. 4k on time from copy 1 to copy 2 then copy 2 to copy 3. 
+ 
 ### Replica location stategy
 default replica numer is 3 
 general logic is:
