@@ -49,6 +49,9 @@ kind of like system snapshot sampling. and EditLog with FsImage is the one used 
 * integrity check through checksum 
 * cluster data re-balance 
 * avoid single point of failure
+
+## Map-reduce
+![image](./img/mr.jpg)
 ## YARN
 ResourceManager, NodeManager, ApplicationManager, Container
 scheduler strategy: FIFO, FAIR, 
