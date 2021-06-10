@@ -42,7 +42,11 @@ e.g. input is ID and output is the rackID on that node.
 ```
 kind of like system snapshot sampling. and EditLog with FsImage is the one used to back-tracking the system change. 
 ```
- 
+### Availiblity, Rubostness, Health-checking(self-monitoring), cluster load balance
+* Heartbeast from Datanode to Namenode, in case no heartbeat from datanode, namenode will mark it down and trigger datablock copy. (e.g. datanode lost, replica corrupted, available replica under threshhold）
+* integrity check through checksum 
+* cluster data re-balance 
+* avoid single point of failure
 ## YARN
 ResourceManager, NodeManager, ApplicationManager, Container
 scheduler strategy: FIFO, FAIR, 
