@@ -92,6 +92,10 @@ Note: Stage is the one scheduled when running one job
 ![image](./img/spark.jpg)
 #### Spark job execution 
 ![image](./img/sjob.jpg)
+
+### spark shuffle
+* Hash Shuffle
+* Sort Shuffle
 ## Hadoop start-all.sh can't have datanode 
 root cause: the cluster id is different if you compare data/current/VERSION and name/current/VERSION. 
 fix: copy clusterid in name/current/VERSION to /data/current/VERSION 
